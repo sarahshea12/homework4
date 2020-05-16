@@ -1,3 +1,4 @@
+//variables
 var beginbutton = document.getElementById("begin")
 var q1 = document.getElementById("question1")
 var q2 = document.getElementById("question2")
@@ -24,17 +25,18 @@ beginbutton.addEventListener("click", function startTimer() {
   
 //hide and show questions
 beginbutton.addEventListener("click", function() {
-    //q1.classList.remove("hide");
     q1.removeAttribute("class","hide");
     head.classList.add("hide")
     beginbutton.classList.add("hide")
 })
 
-// if wrong, subtract 5 from timer; if right, add 100 to score
+// if wrong, subtract 5 from timer
+
 var correct1 = document.getElementById("right1")
 var correct2 = document.getElementById("right2")
 var correct3 = document.getElementById("right3")
 
+//if right, add 100 to score
 correct1.addEventListener("click", function() {
     score = score + 100
     console.log(score)
@@ -50,25 +52,30 @@ correct3.addEventListener("click", function() {
 
 // append high scores
 var uInput = document.getElementById("text").value;
-var names = [""];
+var nameUl = document.getElementById("names")
+var names = [""]
 names.push(uInput + score);
 
-for(var i=0; i<name.length; i++){
-    console.log(names[i]);
-    var li = document.createElement("<li>");
-    li.text(names[i]);
-    document.getElementById("names").append(li);
-}
+var addButton = document.getElementById("add")
+addButton.addEventListener("click", function() {
+    var li = document.createElement("li");
+    li.id = names.length;
+    li.innerHTML = uInput + score;
+    names.push({uInput});
+    nameUl.append(li);
+  })
 
-
-
-
-
-
-
+ 
 // function() {
 //for(i=0;i<10;i++){
 //    a = a + i
 //}
 //return a;
 //
+
+//for(var i=0; i<name.length; i++){
+    //console.log(names[i]);
+    //var li = document.createElement("<li>");
+    //li.text(names[i]);
+    //document.getElementById("names").append(li);
+//}
