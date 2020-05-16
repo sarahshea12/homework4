@@ -6,35 +6,50 @@
     <title>JS Quiz</title>
 </head>
 <body>
-    <h1>Javascript Quiz!</h1>
+    <h1 id="title">Javascript Quiz!</h1>
     <button id="begin">Begin</button>
-<div id="question1">
+    <div class="time">
+        <div id="seconds"></div>
+    </div>
+<div class="hide" id="question1">
     <h2>Question 1: Who created Javascript?</h2>
-    <button class="answer" id="wrong">Douglas Crockford</button>
-    <button class="answer" id="wrong">Mitchell Baker</button>
-    <button class="answer" id="wrong">Yukihiro Matsumoto</button>
-    <button class="answer" id="right">Brendan Eich</button>
+    <button>Douglas Crockford</button>
+    <button>Mitchell Baker</button>
+    <button>Yukihiro Matsumoto</button>
+    <button id="right1">Brendan Eich</button>
 </div>
-<div id="question2">
+<div class="hide" id="question2">
     <h2>Question 2: What year was Javascript created?</h2>
-    <button class="answer" id="right">1995</button>
-    <button class="answer" id="wrong">1996</button>
-    <button class="answer" id="wrong">1997</button>
-    <button class="answer" id="wrong">1998</button>
+    <button id="right2">1995</button>
+    <button>1996</button>
+    <button>1997</button>
+    <button>1998</button>
 </div>
-<div id="question3">
+<div class="hide" id="question3">
     <h2>Question 3: What is the IPA for "Javascript?"</h2>
-    <button class="answer" id="wrong">dʒovəskrɪpt</button>
-    <button class="answer" id="wrong">dʒævʌskript</button>
-    <button class="answer" id="right">dʒɑvəskrɪpt</button>
-    <button class="answer" id="wrong">dʒʊvʌskript</button>
+    <button>dʒovəskrɪpt</button>
+    <button>dʒævʌskript</button>
+    <button id="right3">dʒɑvəskrɪpt</button>
+    <button>dʒʊvʌskript</button>
 </div>
-<div id="highscore">
+<div class="hide" id="highscore">
     <h2>High score:</h2>
+</div>
+<div class="hide" id="hs">
+    <input placeholder="Initials" id="text" />
+    <button>Add</button>
+    <ul id="names"></ul>
 </div>
 
 <style>
-   
+   .time {
+       float: right;
+       font-size: xx-large;
+   }
+   .hide {
+       visibility: hidden;
+   }
+
 </style>
 
 <script src="script.js"></script>
