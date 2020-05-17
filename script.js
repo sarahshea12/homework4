@@ -117,6 +117,5 @@ addBtn.addEventListener("click", function () {
   nameUl.append(li);
   console.log(stored);
   console.log(uInput)
-  beginbutton.removeAttribute("class", "hide")
 })
   
